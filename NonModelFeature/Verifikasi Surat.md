@@ -3,13 +3,13 @@
 sequenceDiagram
     title Verifikasi Surat oleh Sistem Politala Mail
 
-    actor User
+    actor Pengguna
     participant WebUI as Politala Mail UI
     participant VerificationController
     participant PDFScanner as PDF Scanner
     participant DB as Database
 
-    User ->> WebUI: Upload file PDF
+    Pengguna ->> WebUI: Upload file PDF
     activate WebUI
     WebUI ->> VerificationController: Submit PDF
     activate VerificationController
@@ -32,7 +32,7 @@ sequenceDiagram
     end
     deactivate VerificationController
 
-    WebUI -->> User: Tampilkan hasil verifikasi
+    WebUI -->> Pengguna: Tampilkan hasil verifikasi
     deactivate WebUI
 
 

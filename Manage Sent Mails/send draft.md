@@ -1,16 +1,16 @@
 ```mermaid
 
 sequenceDiagram
-    title Pengguna Mengirim Surat dan Membuat ApprovalChain
+    title Dosen dan Tendik Mengirim Surat dan Membuat ApprovalChain
 
-    actor Pengguna
+    actor Dosen dan Tendik
     participant FilamentUI as Politala Mail UI
     participant MailResource
     participant MailModel as Mail
     participant ApprovalModel as ApprovalChain
     participant DB as Database
 
-    Pengguna ->> FilamentUI: Klik "Kirim" pada draft surat
+    Dosen dan Tendik ->> FilamentUI: Klik "Kirim" pada draft surat
     activate FilamentUI
     FilamentUI ->> MailResource: update released = true
     activate MailResource
@@ -40,7 +40,7 @@ sequenceDiagram
     deactivate MailModel
     MailResource -->> FilamentUI: Redirect ke Surat Terkirim
     deactivate MailResource
-    FilamentUI -->> Pengguna: Surat berhasil dikirim dan menunggu persetujuan
+    FilamentUI -->> Dosen dan Tendik: Surat berhasil dikirim dan menunggu persetujuan
     deactivate FilamentUI
 
 

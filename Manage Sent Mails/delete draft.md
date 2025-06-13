@@ -1,15 +1,15 @@
 ```mermaid
 
 sequenceDiagram
-    title Pengguna Menghapus Draft Surat di Politala Mail
+    title Dosen dan Tendik Menghapus Draft Surat di Politala Mail
 
-    actor Pengguna
+    actor Dosen dan Tendik
     participant FilamentUI as Politala Mail UI
     participant MailResource
     participant MailModel as Mail
     participant DB as Database
 
-    Pengguna ->> FilamentUI: Klik "Hapus" pada Draft
+    Dosen dan Tendik ->> FilamentUI: Klik "Hapus" pada Draft
     activate FilamentUI
     FilamentUI ->> MailResource: destroy($id)
     activate MailResource
@@ -26,7 +26,7 @@ sequenceDiagram
     deactivate MailModel
     MailResource -->> FilamentUI: Refresh Draft
     deactivate MailResource
-    FilamentUI -->> Pengguna: Draft berhasil dihapus
+    FilamentUI -->> Dosen dan Tendik: Draft berhasil dihapus
     deactivate FilamentUI
 
 

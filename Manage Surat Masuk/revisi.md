@@ -3,13 +3,13 @@
 sequenceDiagram
     title Group Menolak Surat Masuk dengan Catatan (Revisi)
 
-    actor Pengguna
+    actor Dosen dan Tendik
     participant FilamentUI as Politala Mail UI
     participant MailController
     participant ApprovalModel as ApprovalChain
     participant DB as Database
 
-    Pengguna ->> FilamentUI: Klik "Tolak + Revisi"
+    Dosen dan Tendik ->> FilamentUI: Klik "Tolak + Revisi"
     activate FilamentUI
     FilamentUI ->> MailController: denyWithNote(mail_id, group_id, notes)
     activate MailController
@@ -29,7 +29,7 @@ sequenceDiagram
 
     MailController -->> FilamentUI: Revisi disimpan
     deactivate MailController
-    FilamentUI -->> Pengguna: Surat ditolak dengan catatan
+    FilamentUI -->> Dosen dan Tendik: Surat ditolak dengan catatan
     deactivate FilamentUI
 
 

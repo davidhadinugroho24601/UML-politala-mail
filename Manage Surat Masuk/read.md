@@ -1,16 +1,16 @@
 ```mermaid
 
 sequenceDiagram
-    title Pengguna Melihat Surat Masuk Berdasarkan ApprovalChain
+    title Dosen dan Tendik Melihat Surat Masuk Berdasarkan ApprovalChain
 
-    actor Pengguna
+    actor Dosen dan Tendik
     participant FilamentUI as Politala Mail UI
     participant MailController as Mail Resource
     participant ApprovalModel as ApprovalChain
     participant MailModel as Mail
     participant DB as Database
 
-    Pengguna ->> FilamentUI: Buka Menu "Surat Masuk"
+    Dosen dan Tendik ->> FilamentUI: Buka Menu "Surat Masuk"
     activate FilamentUI
     FilamentUI ->> MailController: Load surat masuk (where group_id = my group)
     activate MailController
@@ -35,7 +35,7 @@ sequenceDiagram
 
     MailController -->> FilamentUI: Tampilkan daftar surat masuk
     deactivate MailController
-    FilamentUI -->> Pengguna: Surat Masuk ditampilkan
+    FilamentUI -->> Dosen dan Tendik: Surat Masuk ditampilkan
     deactivate FilamentUI
 
 
