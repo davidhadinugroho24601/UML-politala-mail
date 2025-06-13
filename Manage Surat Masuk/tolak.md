@@ -3,13 +3,13 @@
 sequenceDiagram
     title Group Menolak Surat Masuk di Politala Mail
 
-    actor Admin
+    actor Pengguna
     participant FilamentUI as Politala Mail UI
     participant MailController
     participant ApprovalModel as ApprovalChain
     participant DB as Database
 
-    Admin ->> FilamentUI: Klik "Tolak"
+    Pengguna ->> FilamentUI: Klik "Tolak"
     activate FilamentUI
     FilamentUI ->> MailController: deny(mail_id, group_id)
     activate MailController
@@ -29,7 +29,7 @@ sequenceDiagram
 
     MailController -->> FilamentUI: Notifikasi ditolak
     deactivate MailController
-    FilamentUI -->> Admin: Surat ditolak
+    FilamentUI -->> Pengguna: Surat ditolak
     deactivate FilamentUI
 
 

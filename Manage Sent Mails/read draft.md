@@ -1,15 +1,15 @@
 ```mermaid
 
 sequenceDiagram
-    title Admin Melihat Draft Surat di Politala Mail
+    title Pengguna Melihat Draft Surat di Politala Mail
 
-    actor Admin
+    actor Pengguna
     participant FilamentUI as Politala Mail UI
     participant MailResource
     participant MailModel as Mail
     participant DB as Database
 
-    Admin ->> FilamentUI: Buka Kirim Surat > Draft
+    Pengguna ->> FilamentUI: Buka Kirim Surat > Draft
     activate FilamentUI
     FilamentUI ->> MailResource: Load mail list (where released = false)
     activate MailResource
@@ -23,7 +23,7 @@ sequenceDiagram
     deactivate MailModel
     MailResource -->> FilamentUI: Render draft table
     deactivate MailResource
-    FilamentUI -->> Admin: Tampilkan daftar draft surat
+    FilamentUI -->> Pengguna: Tampilkan daftar draft surat
     deactivate FilamentUI
 
 

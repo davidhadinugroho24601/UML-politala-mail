@@ -3,13 +3,13 @@
 sequenceDiagram
     title Group Menyetujui Surat Masuk di Politala Mail
 
-    actor Admin
+    actor Pengguna
     participant FilamentUI as Politala Mail UI
     participant MailController
     participant ApprovalModel as ApprovalChain
     participant DB as Database
 
-    Admin ->> FilamentUI: Klik "Setujui"
+    Pengguna ->> FilamentUI: Klik "Setujui"
     activate FilamentUI
     FilamentUI ->> MailController: approve(mail_id, group_id)
     activate MailController
@@ -29,7 +29,7 @@ sequenceDiagram
 
     MailController -->> FilamentUI: Success response
     deactivate MailController
-    FilamentUI -->> Admin: Surat disetujui
+    FilamentUI -->> Pengguna: Surat disetujui
     deactivate FilamentUI
 
 
