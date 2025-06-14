@@ -1,7 +1,7 @@
 ```mermaid
 
 sequenceDiagram
-    title Group Menolak Surat Masuk dengan Catatan (Revisi)
+    title Dosen dan Tendik Menolak Surat Masuk dengan Catatan (Revisi)
 
     actor Dosen dan Tendik
     participant FilamentUI as Politala Mail UI

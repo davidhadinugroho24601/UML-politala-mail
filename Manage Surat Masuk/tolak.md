@@ -1,7 +1,7 @@
 ```mermaid
 
 sequenceDiagram
-    title Group Menolak Surat Masuk di Politala Mail
+    title Dosen dan Tendik Menolak Surat Masuk di Politala Mail
 
     actor Dosen dan Tendik
     participant FilamentUI as Politala Mail UI
